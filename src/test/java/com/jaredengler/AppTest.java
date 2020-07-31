@@ -20,4 +20,9 @@ public class AppTest {
         assertEquals("", textPyramid.generate(0));
     }
 
+    @Test
+    public void testOneHeight() {
+        assertEquals(">", textPyramid.generate(1));
+    }
+
 }
