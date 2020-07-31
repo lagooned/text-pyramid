@@ -1,22 +1,23 @@
 
 package com.jaredengler;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import static org.junit.Assert.assertEquals;
 
-public class AppTest extends TestCase {
+import org.junit.Before;
+import org.junit.Test;
 
-    public AppTest(String testName) {
-        super(testName);
+public class AppTest {
+
+    TextPyramid textPyramid;
+
+    @Before
+    public void setup() {
+        textPyramid = new TextPyramid();
     }
 
-    public static Test suite() {
-        return new TestSuite(AppTest.class);
-    }
-
-    public void testApp() {
-        assertTrue(true);
+    @Test
+    public void testZeroHeight() {
+        assertEquals("", textPyramid.generate(0));
     }
 
 }
