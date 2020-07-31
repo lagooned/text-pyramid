@@ -17,12 +17,17 @@ public class AppTest {
 
     @Test
     public void testZeroHeight() {
-        assertEquals("", textPyramid.generate(0));
+        assertEquals(">", textPyramid.generate(0, '-'));
     }
 
     @Test
     public void testOneHeight() {
-        assertEquals(">", textPyramid.generate(1));
+        assertEquals("->", textPyramid.generate(1, '-'));
+    }
+
+    @Test
+    public void testTwoHeight() {
+        assertEquals("-\n-->\n-", textPyramid.generate(2, '-'));
     }
 
 }
