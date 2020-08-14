@@ -18,7 +18,7 @@ public class AppTest {
 
     @Test
     public void testZeroHeight() {
-        var text = textPyramid.generate(0, "-");
+        final var text = textPyramid.generate(0, "-");
         assertEquals(">", text);
     }
 
@@ -47,14 +47,14 @@ public class AppTest {
 
         for (int i = 4; i < 100; i++) {
 
-            String pyramidString = textPyramid.generate(i, "-");
+            final String pyramidString = textPyramid.generate(i, "-");
             assertTrue(pyramidString.contains("-".repeat(i).concat(">")));
 
-            int lowerBound = i * i / 2;
-            int upperBound = 2 * (lowerBound + i);
-            int pyramidStringLength = pyramidString.length();
-            boolean lowerBoundCheck = pyramidStringLength >= lowerBound;
-            Boolean upperBoundCheck = upperBound >= pyramidStringLength;
+            final int lowerBound = i * i / 2;
+            final int upperBound = 2 * (lowerBound + i);
+            final int pyramidStringLength = pyramidString.length();
+            final boolean lowerBoundCheck = pyramidStringLength >= lowerBound;
+            final Boolean upperBoundCheck = upperBound >= pyramidStringLength;
 
             assertTrue(lowerBoundCheck);
             assertTrue(upperBoundCheck);

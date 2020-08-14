@@ -5,7 +5,7 @@ import java.util.stream.IntStream;
 
 public class TextPyramid {
 
-    String generate(Integer height, String pyramidCharacter) {
+    String generate(final Integer height, final String pyramidCharacter) {
         return IntStream.iterate(-height, i -> i + 1).boxed()
             .map(n -> -Math.abs(n))
             .map(n -> n + height)
@@ -15,8 +15,8 @@ public class TextPyramid {
             .trim();
     }
 
-    private String createRepeatedStringOf(Integer height, String characterToRepeat, Integer times) {
-        var repeatCharString = characterToRepeat.repeat(times);
+    private String createRepeatedStringOf(final Integer height, final String characterToRepeat, final Integer times) {
+        final var repeatCharString = characterToRepeat.repeat(times);
         if (times == height)
             return repeatCharString.concat(">");
         return repeatCharString;
