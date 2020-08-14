@@ -38,6 +38,11 @@ public class AppTest {
     }
 
     @Test
+    public void testFourHeight() {
+        assertEquals("-\n--\n---\n---->\n---\n--\n-", textPyramid.generate(4, "-"));
+    }
+
+    @Test
     public void testNHeight() {
 
         for (int i = 4; i < 100; i++) {
